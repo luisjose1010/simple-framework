@@ -1,0 +1,13 @@
+{
+    "name": "luisjose1010/shark-shop",
+    "description": "Online shop with a sales and product management system",
+    "type": "project",
+    "license": "GNU General Public License v3.0",
+    "authors": [
+        {
+            "name": "luisjose1010",
+            "email": "luis06jose@gmail.com"
+        }
+    ],
+    "require": {}
+}
