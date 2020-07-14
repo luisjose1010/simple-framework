@@ -9,6 +9,9 @@
             "email": "luis06jose@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {"Framework\\":"framework/"}
+    },
     "require": {
         "nikic/fast-route": "^1.3"
     }

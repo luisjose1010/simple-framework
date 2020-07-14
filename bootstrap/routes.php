@@ -1,13 +1,13 @@
 <?php
 
-$dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $route) {
-    $route->get('/', function(){
-        include __DIR__.'/../resources/views/inicio.php';
-    });
+use Framework\Routing\Routes;
 
-    $route->get('/productos', function(){
-        include __DIR__.'/../resources/views/productos.php';
-    });
+require __DIR__.'/../routes/routes.php';
+
+$dispatcher = FastRoute\simpleDispatcher(function (FastRoute\RouteCollector $routeCollector) {
+    foreach (Routes::getRoutes() as $route) {
+        $routeCollector->addRoute($route->getMethod(), $route->getRoutePattern(), $route->getClousure());
+    }
 });
 
 // Fetch method and URI from somewhere
