@@ -1,11 +1,12 @@
 <?php
 
 use Framework\Routing\Routes;
+use Framework\View\Render;
 
 Routes::get('/', function () {
-    include __DIR__.'/../resources/views/inicio.php';
+    Render::view("inicio");
 });
 
 Routes::get('/productos', function () {
-    include __DIR__.'/../resources/views/productos.php';
+    Render::view("productos");
 });
