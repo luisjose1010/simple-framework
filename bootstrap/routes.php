@@ -2,7 +2,8 @@
 
 use Framework\Routing\Routes;
 
-require __DIR__.'/../routes/routes.php';
+$routesConfig = include __DIR__ . '/../config/routes.php';
+require $routesConfig["path"];
 
 $dispatcher = FastRoute\simpleDispatcher(function (FastRoute\RouteCollector $routeCollector) {
     foreach (Routes::getRoutes() as $route) {

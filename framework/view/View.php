@@ -4,17 +4,21 @@ namespace Framework\View;
 
 use Exception;
 
+
+
 class View {
 
     protected $view;
-    protected $viewsPath = __DIR__ . '/../../resources/views/';
+    protected $viewsPath;
     protected $renderEnable = false;
 
     public function renderize(){
         $this->renderEnable = true;
     } 
 
-    function __construct(string $view) {
+    function __construct(string $view, $viewsPath) {
+        $this->viewsPath = $viewsPath;
+        
         if(file_exists($this->viewsPath . $view . '.php')){
             $this->view = $view;
         } else{
