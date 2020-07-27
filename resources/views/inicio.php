@@ -6,8 +6,13 @@
     <title>Inicio</title>
 </head>
 <body>
-    <div style="background-color:aqua">
-        Prueba de un inicio
+    <div id="app">
+        <a href="/productos">productos</a>
+        <p><example-component></example-component></p>
     </div>
+
+
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/app.css">
 </body>
 </html>

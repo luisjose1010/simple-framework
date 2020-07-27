@@ -6,8 +6,12 @@
     <title>Productos</title>
 </head>
 <body>
-    <div style="background-color:red">
-        Productos
+    <div id="app">
+        <a href="/">inicio</a>
+        <p>Pagina de productos</p>
     </div>
+
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/app.css">
 </body>
 </html>
