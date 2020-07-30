@@ -101,6 +101,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -123,7 +125,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.example[data-v-7168fb6a] {\n    background: rgb(66, 218, 104);\n}\n", ""]);
+exports.push([module.i, "\n.example[data-v-7168fb6a] {\n    background: rgb(66, 218, 104);\n    width: 20%;\n    border-radius: 4px;\n}\nimg[data-v-7168fb6a] {\n    border: 1px solid rgb(43, 138, 66);\n    background-color: rgb(55, 177, 85);\n    border-radius: 4px;\n    padding: 5px;\n    width: 150px;\n}\n", ""]);
 
 // exports
 
@@ -2433,7 +2435,12 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "example" }, [
-    _vm._v("\n    " + _vm._s(_vm.body) + "\n")
+    _c("h2", [_vm._v(_vm._s(_vm.body))]),
+    _vm._v(" "),
+    _c("br"),
+    _c("br"),
+    _vm._v(" "),
+    _c("img", { attrs: { src: __webpack_require__(/*! ./../../img/test-img.jpg */ "./resources/assets/img/test-img.jpg") } })
   ])
 }
 var staticRenderFns = []
@@ -14569,6 +14576,17 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+
+/***/ "./resources/assets/img/test-img.jpg":
+/*!*******************************************!*\
+  !*** ./resources/assets/img/test-img.jpg ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/test-img.jpg?b806da636f944fbc7c674fc3121b2d71";
 
 /***/ }),
 
