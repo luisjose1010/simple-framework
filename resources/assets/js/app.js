@@ -2,6 +2,9 @@
 import Vue from 'vue'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
+import Vuetify from 'vuetify';
+
+Vue.use(Vuetify);
 
 const requireComponent = require.context(
   // La ruta relativa de la carpeta de componentes
@@ -33,5 +36,6 @@ requireComponent.keys().forEach(fileName => {
 })
 
 const app = new Vue({
-    el: "#app"
+    el: "#app",
+    vuetify: new Vuetify()
 })

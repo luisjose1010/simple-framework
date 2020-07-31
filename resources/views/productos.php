@@ -7,8 +7,10 @@
 </head>
 <body>
     <div id="app">
-        <a href="/">inicio</a>
-        <p>Pagina de productos</p>
+        <v-app>
+            <a href="/">inicio</a>
+            <p>Pagina de productos</p>
+        </v-app>
     </div>
 
     <script src="js/app.js"></script>

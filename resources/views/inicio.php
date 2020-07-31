@@ -7,8 +7,10 @@
 </head>
 <body>
     <div id="app">
-        <a href="/productos">productos</a>
-        <p><example-component></example-component></p>
+        <v-app>
+            <a href="/productos">productos</a>
+            <p><example-component></example-component></p>
+        </v-app>
     </div>
 
 
