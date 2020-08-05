@@ -7,10 +7,10 @@
 </head>
 <body>
     <div id="app">
-        <v-app>
-            <a href="/">inicio</a>
-            <p>Pagina de productos</p>
-        </v-app>
+        <app>
+            <br>
+            <h1>Pagina de productos</h1>
+        </app>
     </div>
 
     <script src="js/app.js"></script>
