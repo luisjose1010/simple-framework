@@ -2,12 +2,16 @@
 
 namespace Framework\View;
 
-class Render{
-
-    public static function view(string $view) {
-        $viewsConfig = include __DIR__ . '/../../config/views.php';
-
-        $view = new View($view, $viewsConfig["path"]);
-        $view->renderize();
+class Render
+{
+    public static function view(string $view, array $viewParameters = null)
+    {
+        if (isset($viewParameters)) {
+            $view = new View($view, $viewParameters);
+            $view->renderize();
+        } else {
+            $view = new View($view);
+            $view->renderize();
+         }
     }
 }

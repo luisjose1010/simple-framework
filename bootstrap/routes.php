@@ -31,7 +31,8 @@ switch ($routeInfo[0]) {
         echo 'Error: Metodo incorrecto';
         break;
     case FastRoute\Dispatcher::FOUND:
-        $handler = $routeInfo[1];     
-        call_user_func($handler);
+        $handler = $routeInfo[1];
+        $parameters = $routeInfo[2];     
+        call_user_func($handler, $parameters);
         break;
 }
