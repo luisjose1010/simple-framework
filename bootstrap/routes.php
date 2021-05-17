@@ -33,7 +33,7 @@ switch ($routeInfo[0]) {
         break;
     case FastRoute\Dispatcher::FOUND:
         $handler = $routeInfo[1];
-        $parameters[] = $routeInfo[2];
+        $parameters = array($routeInfo[2]);
 
         if(!is_callable($handler)) {
             list($class, $method) = explode("@", $handler, 2);
