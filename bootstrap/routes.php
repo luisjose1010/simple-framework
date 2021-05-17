@@ -1,6 +1,7 @@
 <?php
 
 use Framework\Routing\Routes;
+use Framework\Configuration\ControllerConfiguration;
 
 $routesConfig = include __DIR__ . '/../config/routes.php';
 require $routesConfig["path"];
@@ -32,7 +33,15 @@ switch ($routeInfo[0]) {
         break;
     case FastRoute\Dispatcher::FOUND:
         $handler = $routeInfo[1];
-        $parameters = $routeInfo[2];     
-        call_user_func($handler, $parameters);
+        $parameters[] = $routeInfo[2];
+
+        if(!is_callable($handler)) {
+            list($class, $method) = explode("@", $handler, 2);
+            $class = ControllerConfiguration::getNamespace() . $class;
+
+            call_user_func_array(array(new $class, $method), $parameters);
+        } else {
+            call_user_func($handler, $parameters[0]);
+        }
         break;
 }
