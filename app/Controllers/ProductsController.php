@@ -4,17 +4,28 @@ namespace App\Controllers;
 
 use Framework\Controller;
 use Framework\View\Render;
+use App\Models\ProductModel;
+
 
 class ProductsController extends Controller
 {
+    private $message = "Mensaje de prueba por parametros";
+
     public function index(array $parameters = null)
     {
-        Render::view('productos');
+        $productModel = new ProductModel();
+        $products = $productModel->getAll();
+        $message = $this->message;
+
+        Render::view('productos', compact('products','message'));
     }
 
     public function get(array $parameters)
     {
-        $parameters["message"] = "Mensaje de prueba por parametros";
-        Render::view("productos", $parameters);
+        $productModel = new ProductModel();
+        $product = $productModel->get($parameters["id"]);
+        $message = $this->message;
+
+        Render::view("productos", compact('product', 'message'));
     }
 }

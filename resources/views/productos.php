@@ -11,10 +11,23 @@
         <br>
             <h1>Pagina de productos</h1><br>
 
-            <?php if(isset($id, $message)): ?>
-            <h2><?= "Producto: $id" ?></h2>
-            <br>
-            <h3><?= $message ?></h3>
+            <?php if(isset($product)): ?>
+                <h2>Producto: <?= $product["nombre"] ?></h2>
+                <br>
+            <?php endif; ?>
+
+            <?php if(isset($products)): ?>
+                <ol>
+                    <?php foreach($products as $item): ?>
+                    <li><?= $item["nombre"] ?></li>
+                    <?php endforeach; ?>
+                </ol>
+                <br>
+            <?php endif; ?>
+            
+
+            <?php if(isset($message)): ?>
+                <h3><?= $message ?></h3>
             <?php endif; ?>
         </app>
     </div>
