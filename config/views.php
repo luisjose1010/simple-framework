@@ -1,5 +1,6 @@
 <?php
 
 return [
-    "path" => __DIR__ . '/../resources/views/'
+    "path" => __DIR__ . '/../resources/views/',
+    "notFoundErrorView" => 'rutaError'
 ];

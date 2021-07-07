@@ -8,4 +8,9 @@ class ViewsConfiguration
         $configuration = include __DIR__ . '/../../config/views.php';
         return $configuration["path"];
     }
+
+    public static function getNotFoundError(){
+        $configuration = include __DIR__ . '/../../config/views.php';
+        return $configuration["notFoundErrorView"];
+    }
 }

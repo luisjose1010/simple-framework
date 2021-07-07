@@ -3,6 +3,8 @@
 namespace Framework\Routing;
 
 use Framework\Configuration\ControllerConfiguration;
+use Framework\Configuration\ViewsConfiguration;
+use Framework\View\Render;
 use FastRoute\Dispatcher;
 
 class Routes{
@@ -32,7 +34,7 @@ class Routes{
     public function initiateRouting(){
         switch ($this->routeInfo[0]) {
             case Dispatcher::NOT_FOUND:
-                echo 'Error: No se encuentra la ruta especificada';
+                Render::view(ViewsConfiguration::getNotFoundError());
                 break;
             case Dispatcher::METHOD_NOT_ALLOWED:
                 echo 'Error: Metodo incorrecto';
