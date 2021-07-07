@@ -2,7 +2,7 @@
 
 use Framework\Routing\Routes;
 
-Routes::get('/', 'HomeController@index');
+Routes::get('/', [App\Controllers\HomeController::class, 'index']);
 
 Routes::get('/productos', 'ProductsController@index');
 

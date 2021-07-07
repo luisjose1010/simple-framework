@@ -24,24 +24,5 @@ $uri = rawurldecode($uri);
 
 $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
 
-switch ($routeInfo[0]) {
-    case FastRoute\Dispatcher::NOT_FOUND:
-        echo 'Error: No se encuentra la ruta especificada';
-        break;
-    case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
-        echo 'Error: Metodo incorrecto';
-        break;
-    case FastRoute\Dispatcher::FOUND:
-        $handler = $routeInfo[1];
-        $parameters = array($routeInfo[2]);
-
-        if(!is_callable($handler)) {
-            list($class, $method) = explode("@", $handler, 2);
-            $class = ControllerConfiguration::getNamespace() . $class;
-
-            call_user_func_array(array(new $class, $method), $parameters);
-        } else {
-            call_user_func($handler, $parameters[0]);
-        }
-        break;
-}
+$routes = new Routes($routeInfo);
+$routes->initiateRouting();
