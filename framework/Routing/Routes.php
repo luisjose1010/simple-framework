@@ -2,7 +2,7 @@
 
 namespace Framework\Routing;
 
-use Framework\Configuration\ControllerConfiguration;
+use Framework\Configuration\ControllersConfiguration;
 use Framework\Configuration\ViewsConfiguration;
 use Framework\View\Render;
 use FastRoute\Dispatcher;
@@ -47,7 +47,7 @@ class Routes{
 
                     // Si la función está en forma de un String del tipo 'controlador@metodo'
                     list($class, $method) = explode("@", $handler, 2);
-                    $class = ControllerConfiguration::getNamespace() . $class;
+                    $class = ControllersConfiguration::getNamespace() . $class;
         
                     call_user_func_array(array(new $class, $method), $parameters);
                 } else if(is_array($handler)) {

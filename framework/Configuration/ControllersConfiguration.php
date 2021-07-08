@@ -2,10 +2,10 @@
 
 namespace Framework\Configuration;
 
-class ControllerConfiguration
+class ControllersConfiguration
 {
     public static function getNamespace(){
-        $configuration = include __DIR__ . '/../../config/controller.php';
+        $configuration = include __DIR__ . '/../../config/controllers.php';
         return $configuration["namespace"];
     }
 }
