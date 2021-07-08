@@ -17,7 +17,7 @@ class ProductsController extends Controller
         $products = $productModel->getAll();
         $message = $this->message;
 
-        Render::view('productos', compact('products','message'));
+        Render::view('products', compact('products','message'));
     }
 
     public function get(array $parameters)
@@ -26,6 +26,6 @@ class ProductsController extends Controller
         $product = $productModel->get($parameters["id"]);
         $message = $this->message;
 
-        Render::view("productos", compact('product', 'message'));
+        Render::view("products", compact('product', 'message'));
     }
 }

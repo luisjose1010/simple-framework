@@ -9,6 +9,6 @@ class HomeController extends Controller
 {
     public function index($parameters = null)
     {
-        Render::view('inicio');
+        Render::view('home');
     }
 }
