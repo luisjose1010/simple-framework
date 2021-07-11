@@ -20,7 +20,7 @@
       </v-navigation-drawer>
 
       <v-app-bar app color="cyan darken-4" dark>
-        <v-toolbar-title>SharkShop</v-toolbar-title>
+        <v-toolbar-title>Simple Framework</v-toolbar-title>
 
         <v-spacer></v-spacer>
         <v-toolbar-items class="d-none d-md-flex">

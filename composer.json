@@ -1,6 +1,6 @@
 {
-    "name": "luisjose1010/shark-shop",
-    "description": "Online shop with a sales and product management system",
+    "name": "luisjose1010/simple-framework",
+    "description": "Simple MVC framework that incorporates VueJS, Vuetify and PHP technologies, through NodeJS and Composer",
     "type": "project",
     "license": "GNU General Public License v3.0",
     "authors": [

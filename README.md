@@ -3,7 +3,7 @@
 - Vuetify
 - Composer
 
-# Shark-Shop
+# Simple Framework
 
 **Table of Contents**
 
@@ -13,11 +13,7 @@
 
 ## Guía de estilos de php
 
-Se sigue la convención de php basada en PSR-12.
-
-### Véase también
-
-https://www.php-fig.org/psr/psr-12/
+Se sigue la convención de php basada en [PSR-12](https://www.php-fig.org/psr/psr-12/ "PSR-12").
 
 
 ## Guía de estilos de los commits
@@ -98,14 +94,18 @@ https://chris.beams.io/posts/git-commit/
 
 ## Tecnologías
 
-Para clonar el proyecto, seguir con las instrucciones proporcionadas por git/github. En su defecto intentar con el comando:
+Clona el proyecto con las instrucciones proporcionadas por git/github.
 
-`git clone`
+`git clone https://github.com/Goblins-Studios/simple-framework.git`
+`cd simple-framwork`
 
-Se utiliza NodeJS y Composer para gestionar los lenguajes y las dependencias de las bibliotecas utilizadas.
+Simple Framework utiliza NodeJS y Composer para gestionar las tecnologías y dependencias de las bibliotecas utilizadas.
 
-Para realizar la instalacion de las dependencia del proyecto se puede acceder a la documentación oficial. Puede tambien intentar los siguientes comandos:
+Realiza la instalacion de las dependencia del proyecto y compilar los archivos mediante NodeJS, los cuales se pueden encontrar las intrucciones en la documentación oficial.
 
 `composer install`
 `composer dump-autoload`
 `npm install`
+`npm run dev`
+
+Para utilizar el framework se debe crear un archivo `.env`. Tiene un ejemplo de archivo `.env` llamado `.env.example`

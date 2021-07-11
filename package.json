@@ -1,7 +1,7 @@
 {
-  "name": "shark-shop",
+  "name": "simple-framework",
   "version": "1.0.0",
-  "description": "Online shop with a sales and product management system",
+  "description": "Simple MVC framework that incorporates VueJS, Vuetify and PHP technologies, through NodeJS and Composer",
   "main": "index.js",
   "scripts": {
     "dev": "npm run development",
@@ -13,15 +13,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Goblins-Studios/shopping-project.git"
+    "url": "git+https://github.com/Goblins-Studios/simple-framework.git"
   },
   "keywords": [],
   "author": "luisjose1010",
   "license": "GNU General Public License v3.0",
   "bugs": {
-    "url": "https://github.com/Goblins-Studios/shopping-project/issues"
+    "url": "https://github.com/Goblins-Studios/simple-framework/issues"
   },
-  "homepage": "https://github.com/Goblins-Studios/shopping-project#readme",
+  "homepage": "https://github.com/Goblins-Studios/simple-framework#readme",
   "devDependencies": {
     "@mdi/font": "^5.4.55",
     "cross-env": "^7.0.2",
