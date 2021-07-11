@@ -1,0 +1,38 @@
+{
+  "name": "simple-framework",
+  "version": "1.0.0",
+  "description": "Simple MVC framework that incorporates VueJS, Vuetify and PHP technologies, through NodeJS and Composer",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Goblins-Studios/simple-framework.git"
+  },
+  "keywords": [],
+  "author": "luisjose1010",
+  "license": "GNU General Public License v3.0",
+  "bugs": {
+    "url": "https://github.com/Goblins-Studios/simple-framework/issues"
+  },
+  "homepage": "https://github.com/Goblins-Studios/simple-framework#readme",
+  "devDependencies": {
+    "@mdi/font": "^5.4.55",
+    "cross-env": "^7.0.2",
+    "laravel-mix": "^5.0.4",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^8.0.2",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "vuetify": "^2.3.7"
+  }
+}
